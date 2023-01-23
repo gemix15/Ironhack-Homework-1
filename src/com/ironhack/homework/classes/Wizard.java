@@ -1,37 +1,36 @@
 package com.ironhack.homework.classes;
 
-public class Wizard extends Character{
+import com.ironhack.homework.interfaces.Attacker;
+
+public class Wizard extends Character implements Attacker {
     private int mana;
     private int intelligence;
 
 
-    public Character attack(Character character){
+    @Override
+    public void attack(Character character){
         Character updateCharacter=character;
-        if(mana>=5){
+        double random = Math.random()*(2)+1;
+        if(random > 1.5 && mana>=5){
             updateCharacter.setHp(character.getHp()-intelligence);
-        }else if(mana>0){
+            mana -= 5;
+        }else if(random < 1.5 || mana>0){
             updateCharacter.setHp(character.getHp()-2);
             mana++;
         }else{
-            mana++;
+            mana+=2;
         }
 
-        return updateCharacter;
     }
-    public void setMana(){
-        mana=(int)(Math.random()*(50-10+1)+10);
-    }
-    public void setIntelligence(){
-        intelligence=(int)(Math.random()*(50)+1);
-    }
-    public void setHp(){
-        int hp=(int)(Math.random()*(100-50+1)+50);;
-        super.setHp(hp);
-    }
-    public Wizard(String name, int hp, int mana, int intelligence) {
-        super(name, hp);
-        this.mana = mana;
-        this.intelligence = intelligence;
+
+    public Wizard(String name) {
+        super(name);
+        int wizardHp = (int)(Math.random()*(100-50+1)+50);
+        int wizardItelligence = (int)(Math.random()*(50)+1);
+        int wizardMana = (int)(Math.random()*(50-10+1)+10);
+        super.setHp(wizardHp);
+        setIntelligence(wizardItelligence);
+        setMana(wizardMana);
     }
 
     public int getMana() {
@@ -48,5 +47,18 @@ public class Wizard extends Character{
 
     public void setIntelligence(int intelligence) {
         this.intelligence = intelligence;
+    }
+
+    @Override
+    public String getInfo() {
+        String info = "Character Info:";
+        info += "\n***************";
+        info += "\nName: " + getName();
+        info += "\nType: Wizard";
+        info += "\nHP: " + getHp();
+        info += "\nMana: " + getMana();
+        info += "\nIntelligence: " + getIntelligence();
+        info += "\n***************";
+        return info;
     }
 }

@@ -1,37 +1,36 @@
 package com.ironhack.homework.classes;
 
-public class Warrior extends Character {
+import com.ironhack.homework.interfaces.Attacker;
+
+public class Warrior extends Character implements Attacker {
     private int stamina;
 
     private int strength;
 
-    public Character attack(Character character){
+    @Override
+    public void attack(Character character){
         Character updateCharacter=character;
-        if(stamina>=5){
+        double random = Math.random()*(2)+1;
+        if(random > 1.5 && stamina>=5){
             updateCharacter.setHp(character.getHp()-strength);
-        }else if(stamina>0){
+            stamina -= 5;
+        }else if(random < 1.5 || stamina>0){
             updateCharacter.setHp(character.getHp()-strength/2);
             stamina++;
         }else{
             stamina+=2;
         }
-        return updateCharacter;
-    }
-    public void setStamina(){
-        stamina=(int)(Math.random()*(50-10+1)+10);
-    }
-    public void setStrength(){
-        strength=(int)(Math.random()*10+1);
     }
 
-    public void setHp(){
-        int hp=(int)(Math.random()*(200-100+1)+100);
-        super.setHp(hp);
-    }
-    public Warrior(String name, int hp, int stamina, int strength) {
-        super(name, hp);
-        this.stamina = stamina;
-        this.strength = strength;
+
+    public Warrior(String name) {
+        super(name);
+        int warriorHp=(int)(Math.random()*(200-100+1)+100);
+        int warriorStamina = (int)(Math.random()*(50-10+1)+10);
+        int warriorStrength = (int)(Math.random()*10+1);
+        setStrength(warriorStrength);
+        setStamina(warriorStamina);
+        super.setHp(warriorHp);
     }
     public int getStamina() {
         return stamina;
@@ -47,6 +46,19 @@ public class Warrior extends Character {
 
     public void setStrength(int strength) {
         this.strength = strength;
+    }
+
+    @Override
+    public String getInfo() {
+        String info = "Character Info:";
+        info += "\n***************";
+        info += "\nName: " + getName();
+        info += "\nType: Warrior";
+        info += "\nHP: " + getHp();
+        info += "\nStamina: " + getStamina();
+        info += "\nStrength: " + getStrength();
+        info += "\n***************";
+        return info;
     }
 
 }

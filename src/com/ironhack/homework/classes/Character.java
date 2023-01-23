@@ -6,9 +6,8 @@ public abstract class Character{
     private int hp;
     private boolean isAlive=true;
 
-    public Character( String name, int hp) {
+    public Character( String name) {
         this.name = name;
-        this.hp = hp;
     }
 
     public String getId() {
@@ -42,4 +41,6 @@ public abstract class Character{
     public void setAlive(boolean alive) {
         isAlive = alive;
     }
+
+    public abstract String getInfo();
 }

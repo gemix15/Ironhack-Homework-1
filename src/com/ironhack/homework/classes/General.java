@@ -29,13 +29,14 @@ public class General {
         return character;
     }
 
-    public String battleAttack(Character player1, Character player2){
+    public String battleAttack(Character player1, Character player2) throws InterruptedException {
         do {
             player1.turn(player2);
             player2.turn(player1);
             System.out.println("Player 1: " + player1.getHp());
             System.out.println("Player 2 : " + player2.getHp());
             System.out.println("***************");
+            Thread.sleep(1000);
         }
         while (player1.isAlive() && player2.isAlive());
 

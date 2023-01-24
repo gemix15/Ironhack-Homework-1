@@ -6,7 +6,7 @@ import com.ironhack.homework.classes.Warrior;
 import com.ironhack.homework.classes.Wizard;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 //    crear un player 1
         General player1 = new General();
         Character character1 = player1.createPlayer("Player 1");

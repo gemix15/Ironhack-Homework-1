@@ -28,4 +28,23 @@ public class General {
 
         return character;
     }
+
+    public String battleAttack(Character player1, Character player2){
+        do {
+            player1.turn(player2);
+            player2.turn(player1);
+            System.out.println("Player 1: " + player1.getHp());
+            System.out.println("Player 2 : " + player2.getHp());
+            System.out.println("***************");
+        }
+        while (player1.isAlive() && player2.isAlive());
+
+        String winner = null;
+        if (player1.isAlive()) winner = player1.getName();
+        else if (player2.isAlive()) winner = player2.getName();
+        System.out.println("The winner is : " + winner);
+        return winner;
+    }
+
+
 }

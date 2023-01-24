@@ -7,22 +7,6 @@ public class Wizard extends Character implements Attacker {
     private int intelligence;
 
 
-    @Override
-    public void attack(Character character){
-        Character updateCharacter=character;
-        double random = Math.random()*(2)+1;
-        if(random > 1.5 && mana>=5){
-            updateCharacter.setHp(character.getHp()-intelligence);
-            mana -= 5;
-        }else if(random < 1.5 || mana>0){
-            updateCharacter.setHp(character.getHp()-2);
-            mana++;
-        }else{
-            mana+=2;
-        }
-
-    }
-
     public Wizard(String name) {
         super(name);
         int wizardHp = (int)(Math.random()*(100-50+1)+50);
@@ -60,5 +44,24 @@ public class Wizard extends Character implements Attacker {
         info += "\nIntelligence: " + getIntelligence();
         info += "\n***************";
         return info;
+    }
+
+    @Override
+    public void attack(Character enemy){
+        double random = Math.random()*(2)+1;
+        if(random > 1.5 && mana>=5){
+            enemy.setHp(enemy.getHp()-intelligence);
+            mana -= 5;
+        }else if(random < 1.5 || mana>0){
+            enemy.setHp(enemy.getHp()-2);
+            mana++;
+        }else{
+            mana+=2;
+        }
+    }
+
+    @Override
+    public void turn(Character enemy) {
+        attack(enemy);
     }
 }

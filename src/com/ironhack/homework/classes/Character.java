@@ -35,7 +35,7 @@ public abstract class Character{
     }
 
     public boolean isAlive() {
-        return isAlive;
+        return this.hp > 0;
     }
 
     public void setAlive(boolean alive) {
@@ -43,4 +43,6 @@ public abstract class Character{
     }
 
     public abstract String getInfo();
+
+    public abstract void turn(Character enemy);
 }

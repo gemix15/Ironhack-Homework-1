@@ -4,5 +4,5 @@ import com.ironhack.homework.classes.Character;
 
 public interface Attacker {
 
-    void attack(Character character);
+    void attack(Character character2);
 }

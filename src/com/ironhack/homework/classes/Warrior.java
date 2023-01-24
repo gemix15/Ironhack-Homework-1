@@ -7,21 +7,6 @@ public class Warrior extends Character implements Attacker {
 
     private int strength;
 
-    @Override
-    public void attack(Character character){
-        Character updateCharacter=character;
-        double random = Math.random()*(2)+1;
-        if(random > 1.5 && stamina>=5){
-            updateCharacter.setHp(character.getHp()-strength);
-            stamina -= 5;
-        }else if(random < 1.5 || stamina>0){
-            updateCharacter.setHp(character.getHp()-strength/2);
-            stamina++;
-        }else{
-            stamina+=2;
-        }
-    }
-
 
     public Warrior(String name) {
         super(name);
@@ -59,6 +44,24 @@ public class Warrior extends Character implements Attacker {
         info += "\nStrength: " + getStrength();
         info += "\n***************";
         return info;
+    }
+    @Override
+    public void attack(Character enemy){
+        double random = Math.random()*(2)+1;
+        if(random > 1.5 && stamina>=5){
+            enemy.setHp(enemy.getHp()-strength);
+            stamina -= 5;
+        }else if(random < 1.5 || stamina>0){
+            enemy.setHp(enemy.getHp()-strength/2);
+            stamina++;
+        }else{
+            stamina+=2;
+        }
+    }
+
+    @Override
+    public void turn(Character enemy) {
+        attack(enemy);
     }
 
 }

@@ -2,7 +2,7 @@
 
 In this game you can start a battle between two characters. 
 It's possible to choose between a Warrior or a Wizard. 
-Each of them have particular characteristic attacks and recover energy when attacked.
+Each one of them has two different attacks, each character will make a random attack, the heavy attack spends 5 energy, the weak attack recharges 1 energy and in case of not having energy for any of the attacks it will recover two of energy.
 
 
 

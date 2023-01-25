@@ -33,5 +33,10 @@ Instrucciones de juego:
 5) Read the abilities of each player
 ![image](https://user-images.githubusercontent.com/116492086/214617855-31fdd794-63ba-4059-bc43-3d725bf7e0d5.png)
 6) Press enter to start the battle
-7) ![image](https://user-images.githubusercontent.com/116492086/214618094-2323ed30-f471-4b48-ae5e-685120e04a4b.png)
+![image](https://user-images.githubusercontent.com/116492086/214618094-2323ed30-f471-4b48-ae5e-685120e04a4b.png)
+7) Pay attention to the health of each player during attacks
+![image](https://user-images.githubusercontent.com/116492086/214618682-7e768328-09be-4e1e-9c00-92ff96573842.png)
+8) Look who won
+![image](https://user-images.githubusercontent.com/116492086/214618918-ad72652a-7d23-4ffc-b09c-1f4d6bb4d1c1.png)
+
 

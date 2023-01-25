@@ -67,7 +67,7 @@ public class General {
             System.out.println("---");
             System.out.println(player2.getName() + " attack to " + player1.getName() );
             System.out.println(player1.getName()+": " + player1.getHp()+"♥");
-            System.out.println("***************");
+            System.out.println("****************");
             Thread.sleep(600);
         }
         while (player1.isAlive() && player2.isAlive());

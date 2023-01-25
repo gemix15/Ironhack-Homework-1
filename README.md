@@ -33,3 +33,5 @@ Instrucciones de juego:
 5) Read the abilities of each player
 ![image](https://user-images.githubusercontent.com/116492086/214617855-31fdd794-63ba-4059-bc43-3d725bf7e0d5.png)
 6) Press enter to start the battle
+7) ![image](https://user-images.githubusercontent.com/116492086/214618094-2323ed30-f471-4b48-ae5e-685120e04a4b.png)
+

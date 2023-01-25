@@ -26,6 +26,10 @@ Instrucciones de juego:
 
 1) Choose name for player1
 2) Choose character for player1 (Warrior = 1 - Wizard = 2)
+![image](https://user-images.githubusercontent.com/116492086/214617439-d7ec042b-d2bd-4da3-b00e-67aa990a0969.png)
 3) Choose name for player2
-2) Choose character for player2 (Warrior = 1 - Wizard = 2)
-
+4) Choose character for player2 (Warrior = 1 - Wizard = 2)
+![image](https://user-images.githubusercontent.com/116492086/214617685-fc16eead-0eda-4509-9634-9334b5c719dc.png)
+5) Read the abilities of each player
+![image](https://user-images.githubusercontent.com/116492086/214617855-31fdd794-63ba-4059-bc43-3d725bf7e0d5.png)
+6) Press enter to start the battle

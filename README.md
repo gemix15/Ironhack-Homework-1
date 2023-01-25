@@ -37,11 +37,11 @@ Game instructions:
 4) Choose character for player2 (Warrior = 1 - Wizard = 2)
 ![image](https://user-images.githubusercontent.com/116492086/214617685-fc16eead-0eda-4509-9634-9334b5c719dc.png)
 5) Read the abilities of each player
-![image](https://user-images.githubusercontent.com/116492086/214624806-0bdb184f-567c-43f9-bcbf-2eadf1379d1f.png)
+![image](https://user-images.githubusercontent.com/116492086/214625228-124a4ff9-1f29-4615-b075-c40ece153d37.png)
 6) Press enter to start the battle
 ![image](https://user-images.githubusercontent.com/116492086/214618094-2323ed30-f471-4b48-ae5e-685120e04a4b.png)
 7) Pay attention to the health of each player during attacks
-![image](https://user-images.githubusercontent.com/116492086/214618682-7e768328-09be-4e1e-9c00-92ff96573842.png)
+![image](https://user-images.githubusercontent.com/116492086/214625069-9a05b5c8-c787-4219-9804-553efb578815.png)
 8) Look who won
 ![image](https://user-images.githubusercontent.com/116492086/214618918-ad72652a-7d23-4ffc-b09c-1f4d6bb4d1c1.png)
 

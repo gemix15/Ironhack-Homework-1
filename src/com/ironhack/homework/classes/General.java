@@ -58,12 +58,15 @@ public class General {
         System.out.println(art);
         Scanner neme = new Scanner(System.in);
         System.out.println("\n\t\tPRESS ENTER TO CONTINUE...");
-        neme.nextLine(); 
+        neme.nextLine();
         do {
             player1.turn(player2);
             player2.turn(player1);
-            System.out.println("Player 1: " + player1.getHp()+"♥");
-            System.out.println("Player 2 : " + player2.getHp()+"♥");
+            System.out.println(player1.getName() + " attack to " + player2.getName() );
+            System.out.println(player2.getName()+": " + player2.getHp()+"♥");
+            System.out.println("---");
+            System.out.println(player2.getName() + " attack to " + player1.getName() );
+            System.out.println(player1.getName()+": " + player1.getHp()+"♥");
             System.out.println("***************");
             Thread.sleep(600);
         }

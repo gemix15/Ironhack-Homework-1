@@ -57,7 +57,7 @@ public class General {
     public String battleAttack(Character player1, Character player2) throws InterruptedException {
         System.out.println(art);
         Scanner neme = new Scanner(System.in);
-        System.out.println("\n\t\tPRESIONE ENTER PARA CONTINUAR..."); //Mensaje en pantalla
+        System.out.println("\n\t\tPRESS ENTER TO CONTINUE..."); //Mensaje en pantalla
         neme.nextLine(); //Ahora el programa se detiene hasta que se pulse ENTER
         do {
             player1.turn(player2);

@@ -36,7 +36,6 @@ public class Wizard extends Character implements Attacker {
     @Override
     public String getInfo() {
         String info = "Character Info:";
-        info += "\n***************";
         info += "\nName: " + getName();
         info += "\nType: Wizard";
         info += "\nHP: " + getHp();

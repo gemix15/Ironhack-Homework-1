@@ -10,10 +10,10 @@ public class Wizard extends Character implements Attacker {
     public Wizard(String name) {
         super(name);
         int wizardHp = (int)(Math.random()*(100-50+1)+50);
-        int wizardItelligence = (int)(Math.random()*(50)+1);
+        int wizardIntelligence = (int)(Math.random()*(50)+1);
         int wizardMana = (int)(Math.random()*(50-10+1)+10);
         super.setHp(wizardHp);
-        setIntelligence(wizardItelligence);
+        setIntelligence(wizardIntelligence);
         setMana(wizardMana);
     }
 

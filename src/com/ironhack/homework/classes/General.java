@@ -87,10 +87,20 @@ public class General {
         else if (player2.isAlive()) winner = player2.getName();
         if(player1.isAlive()){
             System.out.println(art1);
+            System.out.println("The winner is : " + winner);
         }else if (player2.isAlive()){
             System.out.println(art2);
+            System.out.println("The winner is : " + winner);
+        }else{
+            if(player1.getHp()>player2.getHp()){
+                winner=player1.getName();
+                System.out.println("The winner is : " + winner);
+            }else if(player2.getHp()> player1.getHp()){
+                winner=player2.getName();
+                System.out.println("The winner is : " + winner);
+            }
         }
-        System.out.println("The winner is : " + winner);
+
         return winner;
     }
 

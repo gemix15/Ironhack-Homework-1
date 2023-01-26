@@ -37,10 +37,10 @@ public class General {
         int characterType;
 
         do {
-            System.out.println("Choose Warrior(1) or Wizard(2):");
+            System.out.println("Choose Warrior(1), Wizard(2), Knight(3), Werewolf(4) or Big boss(5):");
             characterType = scanner.nextInt();
 
-        } while (characterType != 1 && characterType != 2);
+        } while (characterType != 1 && characterType != 2 && characterType != 3 && characterType != 4 && characterType != 5);
 
 
         if (characterType == 1){
@@ -49,7 +49,17 @@ public class General {
         } else if (characterType  == 2){
             character = new Wizard(name);
             System.out.println("You choose a Wizard");
+        } else if (characterType  == 3){
+            character = new Knight(name);
+            System.out.println("You choose a Knight");
+        }else if (characterType  == 4){
+            character = new Werewolf(name);
+            System.out.println("You choose a Werewolf");
+        }else if (characterType  == 5){
+            character = new Bigboss(name);
+            System.out.println("You choose the Big boss");
         }
+
 
         return character;
     }
